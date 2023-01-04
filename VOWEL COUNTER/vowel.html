@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title> mini project 2</title>
+</head>
+
+<body>
+    <div class="box">
+        <h4>vowel counter</h4>
+        <textarea name="inputarea"  onkeyup ="countvowel(this.value);" id="textarea" cols="30" rows="10"></textarea>
+        <p>vowel <span id="vowelcounter"> 0 </span></p>
+    </div>
+    <script type="text/javascript">
+              var vowelcounter = document .getElementById('vowelcounter');
+              function countvowel (str){
+               str =str.toLowerCase();
+               let vowarr = ['a','e','i','o','u']
+                    counter = 0;
+                    for (let letter of str) {
+                     if (vowarr.includes(letter)){  
+                        counter++;
+                        
+                     }
+                   
+                        
+                 }
+                 vowelcounter.innerHTML = counter
+
+              }
+    </script>
+</body>
+
+</html>
